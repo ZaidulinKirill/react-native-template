@@ -1,4 +1,9 @@
 {
   "name": "HelloWorld",
-  "displayName": "HelloWorld"
+  "displayName": "HelloWorld",
+  "splash": {
+    "icon": "assets/logo.png",
+    "width": 100,
+    "background": "#fff"
+  }
 }
