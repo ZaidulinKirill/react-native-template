@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "prod": "react-native start",
     "start": "concurrently -r \"tsc -p tsconfig.json --watch\" \"npm run clear-watchman && react-native start\"",
-    "clear-watchman": "watchman watch-del-all > /dev/null"
+    "clear-watchman": "watchman watch-del-all > /dev/null",
+    "adb-reverse": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
     "@zaidulin_kirill/react-native-toolkit": "^0.0.1-3",
