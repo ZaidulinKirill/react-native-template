@@ -3,6 +3,7 @@
   "display": "React Native",
   "_version": "2.0.3",
   "compilerOptions": {
+    "baseUrl": "src",
     "target": "esnext",
     "module": "commonjs",
     "types": ["react-native"],
@@ -19,7 +20,13 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "typeRoots": [
+      "./src/types"
+    ],
+    "paths": {
+      "@env": ["constants/env"]
+    }
   },
   "exclude": [
     "node_modules",

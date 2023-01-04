@@ -1,25 +1,14 @@
-import React, { useEffect } from 'react';
-import { SafeAreaView, Text, View } from 'react-native';
-import { hide } from 'react-native-bootsplash';
+import React from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { AlertsProvider } from '@kirz/react-native-toolkit';
+import Root from './src/Root';
 
 export default function App() {
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      hide();
-    }, 1000);
-
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, []);
-
   return (
-    <SafeAreaView>
-      <View>
-        <Text>
-          Hello, world
-        </Text>
-      </View>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <AlertsProvider>
+        <Root />
+      </AlertsProvider>
+    </SafeAreaProvider>
   );
 }

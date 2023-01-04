@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "vendor": true,
+    ".patches": true,
+    ".bundle": true,
+    "Gemfile": true,
+    "Gemfile.lock": true,
+    ".node-version": true,
+    ".ruby-version": true,
+    "react-native.config.js": true,
+    ".rnucrc.js": true
+  }
+}

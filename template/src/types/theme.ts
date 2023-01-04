@@ -1,4 +1,4 @@
-import theme from './theme';
+import theme from 'theme';
 
 declare module '@kirz/react-native-toolkit' {
   type ThemeTextVariants = typeof theme.typography;

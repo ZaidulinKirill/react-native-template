@@ -3,31 +3,37 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "prod": "react-native start",
-    "start": "concurrently -r \"tsc -p tsconfig.json --watch\" \"npm run clear-watchman && react-native start\"",
-    "clear-watchman": "watchman watch-del-all > /dev/null",
-    "adb-reverse": "adb reverse tcp:8081 tcp:8081",
-    "scripts:generate-splash": "npx react-native generate-splash-screen"
+    "start:prod": "npm run env:prod && react-native start",
+    "start:dev": "npm run env:dev && npx react-native init-plugins && NODE_ENV=development react-native ts-start",
+    "postinstall": "patch-package --patch-dir .patches",
+    "bundle:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios' --assets-dest='./ios'",
+    "env:prod": "$(npm bin)/rnuc .env-prod.yml",
+    "env:dev": "$(npm bin)/rnuc .env-dev.yml",
+    "scripts:generate-splash": "react-native generate-splash-screen",
+    "scripts:load-fonts": "react-native load-fonts",
+    "scripts:init-plugins": "npx react-native init-plugins",
+    "scripts:adb-reverse": "adb reverse tcp:8081 tcp:8081"
   },
   "dependencies": {
-    "@kirz/react-native-toolkit": "^0.0.1-5",
-    "react": "18.1.0",
-    "react-native": "0.70.6",
-    "react-native-bootsplash": "^4.4.0"
+    "@kirz/react-native-toolkit": "^0.1.1-beta.7",
+    "react": "~18.1.0",
+    "react-native": "^0.70.6",
+    "react-native-bootsplash": "^4.4.0",
+    "react-native-safe-area-context": "^4.4.1",
+    "react-native-ultimate-config": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.16.10",
-    "@babel/runtime": "^7.12.5",
+    "@babel/runtime": "^7.20.7",
     "@types/react": "^18.0.21",
     "@types/react-native": "^0.70.6",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
+    "babel-plugin-module-resolver": "^4.1.0",
     "concurrently": "^7.6.0",
     "eslint": "^8.25.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^2.7.1",
     "eslint-plugin-consistent-default-export-name": "^0.0.15",
     "eslint-plugin-import": "^2.26.0",
@@ -35,6 +41,7 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "metro-react-native-babel-preset": "0.72.3",
+    "patch-package": "^6.5.1",
     "typescript": "^4.8.4"
   }
 }
