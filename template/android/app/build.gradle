@@ -1,4 +1,6 @@
 apply plugin: "com.android.application"
+// [react-native-tooklit] apply-plugin
+// [react-native-tooklit-end] apply-plugin
 
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
@@ -83,6 +85,7 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
+apply from: "../../node_modules/react-native-ultimate-config/android/rnuc.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -135,7 +138,7 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.helloworld"
+        applicationId project.config.get("APP_BUNDLE_ID")
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
