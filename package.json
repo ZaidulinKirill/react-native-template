@@ -1,13 +1,35 @@
 {
-  "name": "@zaidulin_kirill/react-native-template",
+  "name": "@kirz/react-native-template",
   "version": "0.0.1",
   "description": "Clean and minimalist React Native template for a quick start with TypeScript.",
   "scripts": {
-    "test": "exit 0"
+    "release": "npm publish --access public"
   },
   "files": [
-    "template",
-    "template.config.js"
+    "template.config.js",
+    "template/_bundle",
+    "template/.patches",
+    "template/.vscode",
+    "template/android",
+    "template/assets",
+    "template/ios",
+    "template/src",
+    "template/_eslintrc",
+    "template/_gitignore",
+    "template/_node-version",
+    "template/_ruby-version",
+    "template/.env-dev.yml",
+    "template/.env-prod.yml",
+    "template/.rnucrc.js",
+    "template/app.json",
+    "template/App.tsx",
+    "template/babel.config.js",
+    "template/Gemfile",
+    "template/index.js",
+    "template/metro.config.js",
+    "template/package.json",
+    "template/react-native.config.js",
+    "template/tsconfig.json"
   ],
   "repository": {
     "type": "git",
