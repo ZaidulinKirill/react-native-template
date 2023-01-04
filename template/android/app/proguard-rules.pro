@@ -8,3 +8,7 @@
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
 # Add any project specific keep options here:
+
+-keepclassmembers class BUNDLE_ID.BuildConfig { # keep env unchanged
+   public static <fields>;
+}
