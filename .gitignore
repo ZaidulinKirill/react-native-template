@@ -5,3 +5,4 @@ node_modules/
 package-lock.json
 /template/ios/Pods/
 /template/ios/Podfile.lock
+/template/ios/build
