@@ -3,3 +3,5 @@ node_modules/
 .idea/
 *.xcuserstate
 package-lock.json
+/template/ios/Pods/
+/template/ios/Podfile.lock
