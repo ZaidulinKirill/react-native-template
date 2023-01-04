@@ -8,10 +8,11 @@
     "prod": "react-native start",
     "start": "concurrently -r \"tsc -p tsconfig.json --watch\" \"npm run clear-watchman && react-native start\"",
     "clear-watchman": "watchman watch-del-all > /dev/null",
-    "adb-reverse": "adb reverse tcp:8081 tcp:8081"
+    "adb-reverse": "adb reverse tcp:8081 tcp:8081",
+    "scripts:generate-splash": "npx react-native generate-splash-screen"
   },
   "dependencies": {
-    "@zaidulin_kirill/react-native-toolkit": "^0.0.1-3",
+    "@kirz/react-native-toolkit": "^0.0.1-5",
     "react": "18.1.0",
     "react-native": "0.70.6",
     "react-native-bootsplash": "^4.4.0"
