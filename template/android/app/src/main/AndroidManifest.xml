@@ -10,6 +10,10 @@
       android:roundIcon="@mipmap/ic_launcher_round"
       android:allowBackup="false"
       android:theme="@style/BootTheme">
+
+      <!-- [react-native-tooklit] meta-data -->
+      <!-- [react-native-tooklit-end] meta-data -->
+
       <activity
         android:name=".MainActivity"
         android:label="@string/app_name"
