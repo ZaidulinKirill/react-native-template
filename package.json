@@ -1,6 +1,6 @@
 {
   "name": "@kirz/react-native-template",
-  "version": "0.0.2",
+  "version": "0.1.1",
   "description": "Clean and minimalist React Native template for a quick start with TypeScript.",
   "scripts": {
     "release": "npm publish --access public"
@@ -14,10 +14,10 @@
     "template/assets",
     "template/ios",
     "template/src",
-    "template/_eslintrc",
     "template/_gitignore",
     "template/_node-version",
     "template/_ruby-version",
+    "template/.eslintrc.json",
     "template/.env-dev.yml",
     "template/.env-prod.yml",
     "template/.rnucrc.js",
