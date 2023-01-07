@@ -19,7 +19,8 @@
   ],
   "settings": {
     "import/resolver": {
-      "typescript": {},
+      "node": true,
+      "typescript": true,
       "alias": {
         "map": [
           ["@env", "react-native-dotenv"]
