@@ -1,6 +1,4 @@
 <resources>
-    <string name="app_name">${APP_DISPLAY_NAME}</string>
-
     <!-- [react-native-tooklit] strings -->
     <!-- [react-native-tooklit-end] strings -->
 </resources>
