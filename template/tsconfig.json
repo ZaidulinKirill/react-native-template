@@ -25,9 +25,16 @@
       "./src/types"
     ],
     "paths": {
-      "@env": ["constants/env"]
+      "@env": ["constants/env"],
+      "icons/*": ["../assets/icons/*"],
+      "images/*": ["../assets/images/*"]
     }
   },
+  "include": [
+    "./App.tsx",
+    "./src/**/*",
+    "./src/**/*.d.ts"
+  ],
   "exclude": [
     "node_modules",
     "babel.config.js",

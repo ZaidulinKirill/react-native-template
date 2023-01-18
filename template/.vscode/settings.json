@@ -8,6 +8,7 @@
     ".node-version": true,
     ".ruby-version": true,
     "react-native.config.js": true,
-    ".rnucrc.js": true
+    ".rnucrc.js": true,
+    ".gitkeep": true
   }
 }

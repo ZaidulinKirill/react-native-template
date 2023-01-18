@@ -3,10 +3,12 @@ module.exports = {
   plugins: [
     ["module-resolver", {
       root: ["./src/"],
-      extensions: ['.ts', '.tsx', '.js', '.json'],
+      extensions: ['.ts', '.tsx', '.js', '.json', '.svg', '.png', '.jpg'],
       alias: {
-        '@env': './src/constants/env'
+        '@env': './src/constants/env',
+        "icons": "./assets/icons",
+        "images": "./assets/images"
       }
-    }]
+    }],
   ],
 }
