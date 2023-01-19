@@ -1,6 +1,12 @@
-declare module '*.svg' {
-  import { SvgProps } from 'react-native-svg';
+import theme from 'theme';
 
-  const content: React.FC<SvgProps>;
-  export default content;
+declare module '@kirz/react-native-toolkit' {
+  type ThemeTextVariants = typeof theme.typography;
+  export interface TextVariants extends ThemeTextVariants {}
+
+  type ThemeFontFamilies = typeof theme.fonts;
+  export interface FontFamilies extends ThemeFontFamilies {}
+
+  type ThemeColors = typeof theme.colors;
+  export interface Colors extends ThemeColors {}
 }

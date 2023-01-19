@@ -33,11 +33,7 @@
   "include": [
     "./App.tsx",
     "./src/**/*",
-    "./src/**/*.d.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js"
+    "./src/**/*.d.ts",
+    "./node_modules/@kirz/react-native-toolkit/generated.d.ts"
   ]
 }
