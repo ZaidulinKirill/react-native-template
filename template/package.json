@@ -12,7 +12,8 @@
     "scripts:generate-splash": "react-native generate-splash-screen",
     "scripts:load-fonts": "react-native load-fonts",
     "scripts:init-plugins": "npx react-native init-plugins",
-    "scripts:adb-reverse": "adb reverse tcp:8081 tcp:8081"
+    "scripts:adb-reverse": "adb reverse tcp:8081 tcp:8081",
+    "scripts:declare-assets": "npx react-native declare-assets"
   },
   "dependencies": {
     "@kirz/react-native-toolkit": "^0.1.3",
