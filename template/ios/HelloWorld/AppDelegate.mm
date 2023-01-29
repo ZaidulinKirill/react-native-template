@@ -30,6 +30,12 @@ static NSString *const kRNConcurrentRoot = @"concurrentRoot";
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity *)userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler {
+  // [react-native-tooklit] continueUserActivity
+  // [react-native-tooklit-end] continueUserActivity
+  return YES;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   // [react-native-tooklit] didFinishLaunchingWithOptions/start
